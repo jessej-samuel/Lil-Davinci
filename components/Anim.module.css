@@ -1,0 +1,96 @@
+.animContainer {
+  min-height: 100vh;
+}
+
+.animationContainer {
+  width: 100%;
+}
+.img_1 {
+  animation-name: slideRightFadeOut;
+  animation-duration: 6s;
+  animation-timing-function: ease-out;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+  animation-play-state: paused;
+}
+
+.img_2 {
+  animation-name: slideLeftFadeOut;
+  animation-duration: 6s;
+  animation-timing-function: ease-out;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+  animation-play-state: paused;
+}
+
+.img_res {
+  animation-name: fadeIn;
+  animation-duration: 6s;
+  animation-timing-function: ease-out;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+  animation-play-state: paused;
+}
+
+.animationContainer:hover .img_1 {
+  animation-play-state: running;
+}
+
+.animationContainer:hover .img_2 {
+  animation-play-state: running;
+}
+
+.animationContainer:hover .img_res {
+  animation-play-state: running;
+}
+
+@keyframes slideRightFadeOut {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  30% {
+    transform: translateX(100%);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+@keyframes slideLeftFadeOut {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  30% {
+    transform: translateX(-100%);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
