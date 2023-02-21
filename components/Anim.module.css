@@ -1,9 +1,38 @@
 .animContainer {
   min-height: 100vh;
+  display: grid;
+  align-items: center;
+  grid-template-rows: 1fr 1fr;
 }
 
 .animationContainer {
+  width: 450px;
+}
+
+.viewHolder {
   width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.description {
+  background-color: red;
+}
+
+.description > h1 {
+  font-size: 2rem;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.description > p {
+  font-size: 1.5rem;
+  text-align: center;
+  margin: 0;
+  padding: 0;
 }
 .img_1 {
   animation-name: slideRightFadeOut;
@@ -13,7 +42,7 @@
   animation-iteration-count: infinite;
   animation-direction: normal;
   animation-fill-mode: forwards;
-  animation-play-state: paused;
+  /* animation-play-state: paused; */
 }
 
 .img_2 {
@@ -24,7 +53,7 @@
   animation-iteration-count: infinite;
   animation-direction: normal;
   animation-fill-mode: forwards;
-  animation-play-state: paused;
+  /* animation-play-state: paused; */
 }
 
 .img_res {
@@ -34,19 +63,19 @@
   animation-delay: 0s;
   animation-iteration-count: infinite;
   animation-direction: normal;
-  animation-fill-mode: forwards;
-  animation-play-state: paused;
+  animation-fill-mode: backwards;
+  /* animation-play-state: paused; */
 }
 
-.animationContainer:hover .img_1 {
+.viewHolder:hover .img_1 {
   animation-play-state: running;
 }
 
-.animationContainer:hover .img_2 {
+.viewHolder:hover .img_2 {
   animation-play-state: running;
 }
 
-.animationContainer:hover .img_res {
+.viewHolder:hover .img_res {
   animation-play-state: running;
 }
 
